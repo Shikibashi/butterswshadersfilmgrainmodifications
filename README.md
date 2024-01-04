@@ -8,6 +8,7 @@ I use filmgrain1 as the first pre-resize shader in mpchc, the second shader bein
 
 I use grain as the first post resize shader in mpchc, the second shader being used is filmgrain1
 
+**Depending on Content resolution being watched it may be worth it to upscale only 2x, so for 480 upscale to 720p, rather than upscaling to 4k, for 720p upscaling to 1440p, for 1080p upscaling to 2160p // Will be testing this out
 
 Ease of use comparison tools are here 
 
