@@ -1,4 +1,4 @@
-Changes i have made to buttersw filmgrain shaders filmgrain1 and grain https://github.com/butterw/bShaders
+Changes i have made to [buttersw filmgrain shaders filmgrain1 and grain](https://github.com/butterw/bShaders)
 
 I used Asmodians Max Settings in Madvr, you can reset madvr easily to use these settings by putting settings.bin and restore default settings.bat in the same directory as madvr, you run the batch file and there you now have the Asmodian Settings
 
