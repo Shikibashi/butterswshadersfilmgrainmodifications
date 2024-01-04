@@ -1,6 +1,6 @@
 // $MinimumShaderProfile: ps_2_0
-#define Strength 30.
-#define Curve01 0.2
+#define Strength 30. // default is 16
+#define Curve01 0.2 // default is 0.25
 #define Show_Grain 0
 
 /* --- grain (dx9) --- */
@@ -34,15 +34,15 @@ When upscaling with no post-resize sharpening, grain can be added pre-resize wit
 */
 
 #define noiseStrength Strength*0.01 //apply Strength scaling factor.
-#define n 40 //number of randomization iterations, ex:4, ! a lower RunCount will cause patterned noise.
+#define n 40 //number of randomization iterations, ex:4, ! a lower RunCount will cause patterned noise. default is 4
 #define PI acos(-1) //3.14159265
-const static float4 RandomFactors = { 1.480, 4.665, 2.718, 44.738 }; // Adjust for Ektachrome-like grain patterns // Randomization factors
+const static float4 RandomFactors = { 1.480, 4.665, 2.718, 44.738 }; // Adjust for Ektachrome-like grain patterns // Randomization factors // default is  = { pow(PI, 4), exp(5), pow(13, 0.5*PI), sqrt(1997) }
 #define rnd(u) r_in.u = frac( dot(r_in, RandomFactors) );
 sampler s0: register(s0);
 float4 p0: register(c0);
-#define CoefLuma float3(0.24, 0.69, 0.07)  // Adjusted luma coefficients //sRGB, HDTV
+#define CoefLuma float3(0.24, 0.69, 0.07)  // Adjusted luma coefficients //sRGB, HDTV // default is #define CoefLuma float3(0.2126, 0.7152, 0.0722) //sRGB, HDTV
 
-#define gshape(x) lerp(1 - pow(abs(2*x - 1), 0.75), 1, Curve01) // Steeper curve for more grain in highlights and shadows
+#define gshape(x) lerp(1 - pow(abs(2*x - 1), 0.75), 1, Curve01) // Steeper curve for more grain in highlights and shadows // default is #define gshape(x) lerp(1 - pow((2*x -1), 2), 1, Curve01) 
 
 float4 main(float2 tex: TEXCOORD0): COLOR {
   float4 r_in = float4( tex.xy, p0.zw *1.0/65536 +exp(5) ); // xy input coordinates and time factors (clock and counter)
@@ -52,7 +52,7 @@ float4 main(float2 tex: TEXCOORD0): COLOR {
     grain = 0.25 -dot(r_in, 0.125); //in [-0.125, 0.125]
     return 0.5 + grain;
   #endif
-  grain = 0.2*noiseStrength -dot(r_in, 0.2*noiseStrength); // noiseStrength*grain
+  grain = 0.2*noiseStrength -dot(r_in, 0.2*noiseStrength); // noiseStrength*grain // default is grain = 0.25*noiseStrength -dot(r_in, 0.125*noiseStrength);
   float4 c0 = tex2D(s0, tex);
   float luma = dot(c0.rgb, CoefLuma);
   grain = gshape(luma)*grain;
