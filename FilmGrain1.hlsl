@@ -40,6 +40,7 @@ Performance of available hlsl filmgrain and noise shaders.
 sampler s0: register(s0);
 float4  p0: register(c0);
 #define random frac(p0.w) //uses clock instead of random, mpv PRNG [0, 1.0]
+#define n 75  // Increased for smoother, finer grain texture // added this
 
 
 float permute(float x) {
