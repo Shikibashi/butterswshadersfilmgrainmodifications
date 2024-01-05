@@ -21,4 +21,6 @@ Ease of use comparison tools are here
 
 [480p Low Bitrate DVD | Twice - 2023 Season's Greetings 'Secret Life @Office' [2022.12.27] (2040632119)](https://imgsli.com/MjMwOTM4)
 
+[480p low bitrate DVD |   Twice - 2022 Japan Season’s Greetings 'Once Way' [2021.12.31] (4788849911666177)](https://imgsli.com/MjMwOTYy)
+
 [2160p Web Video | [2023-10-27] LE SSERAFIM (르세라핌) 'Perfect Night' OFFICIAL M／V with OVERWATCH 2 (hLvWy2b857I)](https://imgsli.com/MjMwOTUw/0/1)
