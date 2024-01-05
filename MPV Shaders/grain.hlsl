@@ -41,7 +41,7 @@ Possible HOOK: MAIN, OUTPUT. use grain_luma.glsl for LUMA hook.
 #define PI 3.14159265 //acos(-1)
 const vec4 RandomFactors = { PI*PI*PI*PI, exp(5), pow(13, 0.5*PI), sqrt(1997) };
 #define rnd(u) r_in.u = fract( dot(r_in, RandomFactors) );
-#define CoefLuma vec4(0.2126, 0.7152, 0.0722, 0) //sRGB, HDTV, rec709
+#define CoefLuma vec4(0.24, 0.69, 0.07, 0) //sRGB, HDTV, rec709
 #define pow2(u) (u)*(u)
 
 float gshape(float x) {
@@ -60,7 +60,7 @@ vec4 hook() {
         grain = 0.25 -dot(r_in, vec4(0.125)); //in [-0.125, 0.125]
         return 0.5 + grain;
     #endif
-    grain = 0.25*noiseStrength -dot(r_in, vec4(0.125*noiseStrength)); // noiseStrength*grain
+    grain = 0.2*noiseStrength -dot(r_in, vec4(0.2*noiseStrength)); // noiseStrength*grain
     vec4 c0 = HOOKED_texOff(0);
     float luma = dot(c0, CoefLuma);
     grain = gshape(luma)*grain;
