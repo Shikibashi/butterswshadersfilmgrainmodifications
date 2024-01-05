@@ -19,6 +19,6 @@ Ease of use comparison tools are here
 
 [1080p low bitate | Le Sserafim - Fan Meeting 'Fernanda' 2023 s／s 'Day 1' [2023.03.18] (2042576304)](https://imgsli.com/MjMwODMx)
 
-480p Low Bitrate DVD | Twice - 2023 Season's Greetings 'Secret Life @Office' [2022.12.27] (2040632119)](https://imgsli.com/MjMwOTM4)
+[480p Low Bitrate DVD | Twice - 2023 Season's Greetings 'Secret Life @Office' [2022.12.27] (2040632119)](https://imgsli.com/MjMwOTM4)
 
 
