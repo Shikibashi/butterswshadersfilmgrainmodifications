@@ -15,10 +15,10 @@ Ease of use comparison tools are here
 [480p High Bitrate| IVE 1st photobook IVE A DREAMY DAY DVD](https://imgsli.com/MjMwODI4)
 
 
-[1080p highish bitrate | [2022-08-20] [Jeans’ ZINE] NewJeans Cafe ☕️ (HzTEsxk3PG4)](https://imgsli.com/MjMwODMw)
+[1080p high bitrate Web Video | [2022-08-20] [Jeans’ ZINE] NewJeans Cafe ☕️ (HzTEsxk3PG4)](https://imgsli.com/MjMwODMw)
 
 [1080p low bitate | Le Sserafim - Fan Meeting 'Fernanda' 2023 s／s 'Day 1' [2023.03.18] (2042576304)](https://imgsli.com/MjMwODMx)
 
 [480p Low Bitrate DVD | Twice - 2023 Season's Greetings 'Secret Life @Office' [2022.12.27] (2040632119)](https://imgsli.com/MjMwOTM4)
 
-
+[2160p Web Video | [2023-10-27] LE SSERAFIM (르세라핌) 'Perfect Night' OFFICIAL M／V with OVERWATCH 2 (hLvWy2b857I)](https://imgsli.com/MjMwOTUw/0/1)
