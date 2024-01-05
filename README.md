@@ -12,11 +12,13 @@ Depending on Content resolution being watched it may be worth it to upscale only
 
 Ease of use comparison tools are here 
 
-[480p IVE 1st photobook IVE A DREAMY DAY DVD](https://imgsli.com/MjMwODI4)
+[480p High Bitrate| IVE 1st photobook IVE A DREAMY DAY DVD](https://imgsli.com/MjMwODI4)
 
 
-[1080p highish bitrate [2022-08-20] [Jeans’ ZINE] NewJeans Cafe ☕️ (HzTEsxk3PG4)](https://imgsli.com/MjMwODMw)
+[1080p highish bitrate | [2022-08-20] [Jeans’ ZINE] NewJeans Cafe ☕️ (HzTEsxk3PG4)](https://imgsli.com/MjMwODMw)
 
-[1080p low bitate Le Sserafim - Fan Meeting 'Fernanda' 2023 s／s 'Day 1' [2023.03.18] (2042576304)](https://imgsli.com/MjMwODMx)
+[1080p low bitate | Le Sserafim - Fan Meeting 'Fernanda' 2023 s／s 'Day 1' [2023.03.18] (2042576304)](https://imgsli.com/MjMwODMx)
+
+[480p Low Bitrate DVD | Twice - 2023 Season's Greetings 'Secret Life @Office' [2022.12.27] (2040632119)](https://imgsli.com/MjMwOTM4)
 
 
