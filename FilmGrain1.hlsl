@@ -1,5 +1,5 @@
 // $MinimumShaderProfile: ps_2_0
-#define INTENSITY 0.05
+#define INTENSITY 0.175
 
 /* --- mpv FilmGrain v1 (dx9) --- */
 /* v0.2 (2023-11) ported to mpc-hc by butterw, License: GPL v3

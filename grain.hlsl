@@ -1,6 +1,6 @@
 // $MinimumShaderProfile: ps_2_0
-#define Strength 30. // default is 16
-#define Curve01 0.2 // default is 0.25
+#define Strength 45. // default is 16
+#define Curve01 0.45 // default is 0.25
 #define Show_Grain 0
 
 /* --- grain (dx9) --- */
@@ -12,7 +12,7 @@ Filmgrain is a physical characteric of film media, digital camera sensors don't 
 Grain shaders typically generate a dynamic luma noise pattern and blend it with the original image. Grain is calculated for each xy pixel of the image using a pseudo-random hash function with time and counter variables used as seed, leading to a dynamic grain pattern updated every frame. Additive grain blending does not significantly alter the original brightness and contrast of the image.
 This shader allows to apply less grain to dark and bright areas vs midtones by multiplying grain with a shaping function based on luma. The shaping function is a tunable parabola centered at midgray. The values in x:0 and x:1.0 are set by parameter Curve01.
 
-out = c0.rgb = c0.rgb* (1 + 1.30*Strength*grain) = c0.rgb + c0.rgb*1.30*Strength*grain;
+out = c0.rgb *1 + 1.250*Strength*grain) = c0.rgb + c0.rgb*1.30*Strength*grain;
   with c0 and out pixel.rgb values in [0, 1.0].
   and noiseStrength = 0.01*Strength.
 
@@ -34,13 +34,13 @@ When upscaling with no post-resize sharpening, grain can be added pre-resize wit
 */
 
 #define noiseStrength Strength*0.01 //apply Strength scaling factor.
-#define n 40 //number of randomization iterations, ex:4, ! a lower RunCount will cause patterned noise. default is 4
+#define n 60 //number of randomization iterations, ex:4, ! a lower RunCount will cause patterned noise. default is 4
 #define PI acos(-1) //3.14159265
-const static float4 RandomFactors = { 1.480, 4.665, 2.718, 44.738 }; // Adjust for Ektachrome-like grain patterns // Randomization factors // default is  = { pow(PI, 4), exp(5), pow(13, 0.5*PI), sqrt(1997) }
+const static float4 RandomFactors = { 1.325, 3.854, 2.467, 42.193 }; // Adjust for Ektachrome-like grain patterns // Randomization factors // default is  = { pow(PI, 4), exp(5), pow(13, 0.5*PI), sqrt(1997) }
 #define rnd(u) r_in.u = frac( dot(r_in, RandomFactors) );
 sampler s0: register(s0);
 float4 p0: register(c0);
-#define CoefLuma float3(0.24, 0.69, 0.07)  // Adjusted luma coefficients //sRGB, HDTV // default is #define CoefLuma float3(0.2126, 0.7152, 0.0722) //sRGB, HDTV
+#define CoefLuma float3(0.2126, 0.7152, 0.0722)  // Adjusted luma coefficients //sRGB, HDTV // default is #define CoefLuma float3(0.2126, 0.7152, 0.0722) //sRGB, HDTV
 
 #define gshape(x) lerp(1 - pow(abs(2*x - 1), 0.75), 1, Curve01) // Steeper curve for more grain in highlights and shadows // default is #define gshape(x) lerp(1 - pow((2*x -1), 2), 1, Curve01) 
 
@@ -52,7 +52,7 @@ float4 main(float2 tex: TEXCOORD0): COLOR {
     grain = 0.25 -dot(r_in, 0.125); //in [-0.125, 0.125]
     return 0.5 + grain;
   #endif
-  grain = 0.2*noiseStrength -dot(r_in, 0.2*noiseStrength); // noiseStrength*grain // default is grain = 0.25*noiseStrength -dot(r_in, 0.125*noiseStrength);
+  grain = 0.25*noiseStrength -dot(r_in, 0.085*noiseStrength); // noiseStrength*grain // default is grain = 0.25*noiseStrength -dot(r_in, 0.125*noiseStrength);
   float4 c0 = tex2D(s0, tex);
   float luma = dot(c0.rgb, CoefLuma);
   grain = gshape(luma)*grain;
