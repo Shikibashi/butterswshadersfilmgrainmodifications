@@ -1,5 +1,9 @@
-#define G 30 //decrease noise strength
-#define Curve01  0.2 //increase curve shaping parameter
+//!HOOK OUTPUT
+//!BIND HOOKED
+//!DESC grain
+
+#define G 50 // default is 16
+#define Curve01  0.2 //default is 0.25
 #define Show_Grain 0
 
 /* --- grain (mpv glsl .hook) --- */
@@ -33,7 +37,7 @@ Possible HOOK: MAIN, OUTPUT. use grain_luma.glsl for LUMA hook.
 
 */
 #define noiseStrength G*0.01 //scaling factor.
-#define n 40 //number of randomization iterations, ex:4, ! a lower RunCount will cause patterned noise.
+#define n 40 //number of randomization iterations, ex:4, ! a lower RunCount will cause patterned noise. // 
 #define PI 3.14159265 //acos(-1)
 const vec4 RandomFactors = { PI*PI*PI*PI, exp(5), pow(13, 0.5*PI), sqrt(1997) };
 #define rnd(u) r_in.u = fract( dot(r_in, RandomFactors) );
@@ -61,18 +65,5 @@ vec4 hook() {
     float luma = dot(c0, CoefLuma);
     grain = gshape(luma)*grain;
     c0.rgb+= grain;
-    //change the aspect ratio of the output to 2.2:1
-    vec2 aspect = vec2(2.2, 1.0);
-    vec2 scale = vec2(min(HOOKED_size.x/HOOKED_size.y * aspect.y/aspect.x, 1.0), min(HOOKED_size.y/HOOKED_size.x * aspect.x/aspect.y, 1.0));
-    vec2 offset = (1.0 - scale) * 0.5;
-    if (HOOKED_pos.x < offset.x || HOOKED_pos.x > 1.0 - offset.x || HOOKED_pos.y < offset.y || HOOKED_pos.y > 1.0 - offset.y) {
-        return vec4(0.0); //fill the unused area with black
-    } else {
-        //adjust the color balance of the output to make it more saturated and contrasty
-        vec3 color = c0.rgb;
-        color = pow(color, vec3(0.8)); //increase contrast
-        color = color * vec3(1.2, 1.1, 1.0); //increase saturation
-        color = clamp(color, 0.0, 1.0); //avoid clipping
-        return vec4(color, 1.0);
-    }
+    return c0;
 }
