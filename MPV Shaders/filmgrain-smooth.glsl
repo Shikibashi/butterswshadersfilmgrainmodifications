@@ -1,22 +1,62 @@
-//!HOOK LUMA
+//!HOOK OUTPUT
 //!BIND HOOKED
 //!DESC gaussian smoothed film grain
 //!COMPUTE 32 32
 
-#define INTENSITY 0.0005  // Adjusted for slight grain intensity
-#define TAPS 7          // Increased for finer grain structure
+#define INTENSITY 0.4 // Increased for coarser grain structure when upscaling low res low bitrate content
+#define TAPS 3 // Increased for coarser grain structure when upscaling low res low bitrate content
 
 const uint row_size = 2 * TAPS + 1;
 const float weights[row_size] = {
-  0.02219054849244,
-  0.04558899978527,
-  0.07981140824009,
-  0.11906462996609,
-  0.15136080967773,  // Central tap with highest weight
-  0.11906462996609,
-  0.07981140824009,
-  0.04558899978527,
-  0.02219054849244
+#if TAPS == 1
+    0.10650697891920,
+    0.78698604216159,
+    0.10650697891920,
+#endif
+
+#if TAPS == 2
+    0.05448868454964,
+    0.24420134200323,
+    0.40261994689424,
+    0.24420134200323,
+    0.05448868454964,
+#endif
+
+#if TAPS == 3
+    0.03663284536919,
+    0.11128075847888,
+    0.21674532140370,
+    0.27068214949642,
+    0.21674532140370,
+    0.11128075847888,
+    0.03663284536919,
+#endif
+
+#if TAPS == 4
+    0.02763055063889,
+    0.06628224528636,
+    0.12383153680577,
+    0.18017382291138,
+    0.20416368871516,
+    0.18017382291138,
+    0.12383153680577,
+    0.06628224528636,
+    0.02763055063889,
+#endif
+
+#if TAPS == 5
+    0.02219054849244,
+    0.04558899978527,
+    0.07981140824009,
+    0.11906462996609,
+    0.15136080967773,
+    0.16396720767670,
+    0.15136080967773,
+    0.11906462996609,
+    0.07981140824009,
+    0.04558899978527,
+    0.02219054849244,
+#endif
 };
 
 const uvec2 isize = uvec2(gl_WorkGroupSize) + uvec2(2 * TAPS);
