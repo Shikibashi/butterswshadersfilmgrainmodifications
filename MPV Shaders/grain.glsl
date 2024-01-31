@@ -2,8 +2,8 @@
 //!BIND HOOKED
 //!DESC grain
 
-#define G 40.0  // Original: 16.0, Adjusted for stronger grain	
-#define Curve01 0.05 // Original: 0.25, Adjusted for more midtone concentration
+#define G 35.0  // Original: 16.0, Adjusted for stronger grain	
+#define Curve01 0 // Original: 0.25, Adjusted for more midtone concentration
 #define Show_Grain 0
 
 /* --- grain (mpv glsl .hook) --- */
@@ -37,7 +37,7 @@ Possible HOOK: MAIN, OUTPUT. use grain_luma.glsl for LUMA hook.
 
 */
 #define noiseStrength G*0.02 //scaling factor.
-#define n 4 //number of randomization iterations, ex:4, ! a lower RunCount will cause patterned noise.
+#define n 16 //number of randomization iterations, ex:4, ! a lower RunCount will cause patterned noise.
 #define PI 3.14159265 //acos(-1)
 const vec4 RandomFactors = { PI*PI*PI*PI, exp(5), pow(13, 0.5*PI), sqrt(1997) };
 #define rnd(u) r_in.u = fract( dot(r_in, RandomFactors) );

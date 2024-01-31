@@ -1,10 +1,10 @@
-//!HOOK OUTPUT
+//!HOOK LUMA
 //!BIND HOOKED
 //!DESC gaussian smoothed film grain
 //!COMPUTE 32 32
 
-#define INTENSITY 0.4 // Increased for coarser grain structure when upscaling low res low bitrate content
-#define TAPS 3 // Increased for coarser grain structure when upscaling low res low bitrate content
+#define INTENSITY 0.015
+#define TAPS 5
 
 const uint row_size = 2 * TAPS + 1;
 const float weights[row_size] = {

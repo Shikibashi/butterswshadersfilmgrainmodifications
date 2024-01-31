@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <InputDefaultBindingsFixApplied>true</InputDefaultBindingsFixApplied>
+    <ShowMenuFixApplied>true</ShowMenuFixApplied>
+    <MenuUpdateVersion>1</MenuUpdateVersion>
+    <Volume>100</Volume>
+    <RecentFiles>
+        <string>F:\Media\TV Shows\Black Books\Season 01\Black Books - S01E01 - Cooking the Books.mkv</string>
+        <string>F:\Media\Kpop\Photobooks\Ive 1St Photobook Ive A Dreamy Day Dvd.mp4</string>
+        <string>F:\Media\TV Shows\Seinfeld\Season 01\Seinfeld - S01E01 - The Seinfeld Chronicles.mkv</string>
+        <string>F:\Media\TV Shows\Scrubs (2001)\Season 1\Scrubs (2001) - S01E03 - My Best Friend's Mistake (480p DVD x265 Panda).mkv</string>
+        <string>F:\Media\Kpop\[Channel] YOUNG POSSE • 영파씨\[2024-01-08] [SUB] INSTANT LOG - JIANA ⎮ 240103 (KYbW5yn1SUY).mp4</string>
+        <string>F:\Media\Kpop\[Channel] YOUNG POSSE • 영파씨\[2023-12-26] [SUB] Merry Christmas With PaNiTo 🎄⎮ YOUNG POSSE (영파씨) (sNnmBxdZXsU).mp4</string>
+        <string>F:\Video\2024-01-08 23-17-23.mp4</string>
+        <string>F:\Media\Kpop\[Channel] YOUNG POSSE • 영파씨\[2024-01-01] [SUB] 2024 New Year Message ⎮ YOUNG POSSE (영파씨) (GpHt3j1s3Kg).mp4</string>
+        <string>F:\Media\Kpop\[Channel] NewJeans\[2023-10-27] [About Jeans] MINJI SCENE🎬 #2 파리 가요？ ｜ MINJI vlog (QI6YU6OZ_FA).mp4</string>
+        <string>F:\Media\Kpop\[Channel] NewJeans\[2023-04-28] [About Jeans] 재미로 하니🙃 EP.2 밀라노 가는 재미 ｜ HANNI vlog (QsJzosJzxRo).mp4</string>
+        <string>F:\Media\Kpop\[Channel] NewJeans\[2023-04-27] [Jeans' ZINE] 하루 종일 체육 시간! 🤸‍♀️ EP.1 인삼펀삼 vs UM UM ｜ NewJeans (R3RWk87geM8).mp4</string>
+        <string>F:\Media\Kpop\[Channel] tripleS official\[2024-01-05] tripleS NXT 너무 귀엽잖아!？ ｜ SIGNAL 240105 (3SCF2HhsHxY).mp4</string>
+        <string>F:\Media\Kpop\[Channel] tripleS official\[2024-01-04] tripleS 모두 NXT에 빠져들 시간! ｜ EN JP CN ｜ SIGNAL 240104 (Wbxd6HYuR8M).mp4</string>
+        <string>F:\Media\Kpop\[Channel] tripleS official\[2024-01-07] SecretBase 231221 JeongHaYeon.SSS [ EN JP ] (K7QIApdD_vQ).mp4</string>
+        <string>https://www.youtube.com/watch?v=ufEviev5iMM|RPG-7 vs Human Torso! - Ballistic High-Speed</string>
+    </RecentFiles>
+    <WindowLocation>
+        <X>-1</X>
+        <Y>1</Y>
+    </WindowLocation>
+    <WindowPosition>
+        <X>3914</X>
+        <Y>3893</Y>
+    </WindowPosition>
+    <WindowSize>
+        <Width>2218</Width>
+        <Height>1248</Height>
+    </WindowSize>
+    <AudioDevice />
+    <ConfigEditorSearch>Video/libplacebo/Color Adjustment:</ConfigEditorSearch>
+    <Mute>no</Mute>
+    <StartupFolder />
+</AppSettings>

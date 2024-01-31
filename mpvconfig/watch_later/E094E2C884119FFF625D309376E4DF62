@@ -1,0 +1,5 @@
+start=2.085500
+audio-delay=0.084000
+vf=bwdif
+af=acompressor=ratio=4,loudnorm
+sub-visibility=no

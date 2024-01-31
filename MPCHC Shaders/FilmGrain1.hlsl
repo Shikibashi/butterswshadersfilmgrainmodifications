@@ -1,5 +1,5 @@
 // $MinimumShaderProfile: ps_2_0
-#define INTENSITY 0.010
+#define INTENSITY 0.000125
 
 /* --- mpv FilmGrain v1 (dx9) --- */
 /* v0.2 (2023-11) ported to mpc-hc by butterw, License: GPL v3
@@ -40,7 +40,7 @@ Performance of available hlsl filmgrain and noise shaders.
 sampler s0: register(s0);
 float4  p0: register(c0);
 #define random frac(p0.w) //uses clock instead of random, mpv PRNG [0, 1.0]
-#define n 120  // Increased for smoother, finer grain texture // added this
+#define n 64 // Increased for smoother, finer grain texture // added this
 
 
 float permute(float x) {
@@ -76,7 +76,7 @@ float4 main(float2 tex: TEXCOORD0): COLOR {
 	grain *= lerp(0.75, 1.0, luma); // Apply luma weighting
 
 	// Example of color grain (subtle variations):
-	float3 colorGrain = grain * float3(1.0, 0.98, 0.95); // Slightly less grain in blue channel
+	float3 colorGrain = grain * float3(1.0, 0.94, 0.91); // Slightly less grain in blue channel
 
 	color.rgb += INTENSITY * colorGrain; // Add color grain
 
