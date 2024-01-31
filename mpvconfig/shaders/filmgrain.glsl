@@ -1,8 +1,13 @@
+// Revised (unknown)
+// https://raw.githubusercontent.com/haasn/gentoo-conf/xor/home/nand/.mpv/shaders/filmgrain.glsl
+//
+// Film Grain by haasn
+//
 //!HOOK LUMA
 //!BIND HOOKED
 //!DESC gaussian film grain
 
-#define INTENSITY 0.0035
+#define INTENSITY 0.00009825
 
 float permute(float x)
 {

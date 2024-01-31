@@ -2,8 +2,8 @@
 //!BIND HOOKED
 //!DESC grain
 
-#define G 40.0  // Original: 16.0, Adjusted for stronger grain	
-#define Curve01 0.05 // Original: 0.25, Adjusted for more midtone concentration
+#define G 20.0  // Original: 16.0, Adjusted for stronger grain	
+#define Curve01 0.05925 // Original: 0.25, Adjusted for more midtone concentration
 #define Show_Grain 0
 
 /* --- grain (mpv glsl .hook) --- */
@@ -37,7 +37,7 @@ Possible HOOK: MAIN, OUTPUT. use grain_luma.glsl for LUMA hook.
 
 */
 #define noiseStrength G*0.02 //scaling factor.
-#define n 4 //number of randomization iterations, ex:4, ! a lower RunCount will cause patterned noise.
+#define n 64 //number of randomization iterations, ex:4, ! a lower RunCount will cause patterned noise.
 #define PI 3.14159265 //acos(-1)
 const vec4 RandomFactors = { PI*PI*PI*PI, exp(5), pow(13, 0.5*PI), sqrt(1997) };
 #define rnd(u) r_in.u = fract( dot(r_in, RandomFactors) );
@@ -45,7 +45,7 @@ const vec4 RandomFactors = { PI*PI*PI*PI, exp(5), pow(13, 0.5*PI), sqrt(1997) };
 #define pow2(u) (u)*(u)
 
 float gshape(float x) {
-    // C + (1-C)*(1 -(2*x-1)^2) = 1 + (C-1)*(2*x-1)^2  //for negative C, use: max(gshape(luma), 0)
+    // C + (1-C)*(1 -(2*x-0.75)^2) = 1 + (C-1)*(2*x-0.75)^2  //for negative C, use: max(gshape(luma), 0)
     return mix(1 -pow2(2*x -1), 1, Curve01);
 }
 
@@ -57,7 +57,7 @@ vec4 hook() {
     for(int i=0; i< n; i++) { rnd(x) rnd(y) rnd(z) rnd(w) }; // randomize
     float grain;
 		#if Show_Grain == 1
-        grain = 0.25 -dot(r_in, vec4(0.125)); //in [-0.125, 0.125]
+        grain = 0.25 -dot(r_in, vec4(-0.125)); //in [-0.125, 0.125]
         return 0.5 + grain;
     #endif
     grain = 0.25*noiseStrength -dot(r_in, vec4(0.125*noiseStrength)); // noiseStrength*grain
