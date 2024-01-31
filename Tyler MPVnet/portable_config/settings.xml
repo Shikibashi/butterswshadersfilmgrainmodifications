@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <InputDefaultBindingsFixApplied>true</InputDefaultBindingsFixApplied>
+    <ShowMenuFixApplied>true</ShowMenuFixApplied>
+    <MenuUpdateVersion>1</MenuUpdateVersion>
+    <Volume>70</Volume>
+    <RecentFiles>
+        <string>F:\Media\Kpop\Photobooks\Ive 1St Photobook Ive A Dreamy Day Dvd.mp4</string>
+        <string>F:\Media\TV Shows\The Nanny (1993)\Season 1\The Nanny - S01E01 - Pilot (a.k.a. The Nanny).mkv</string>
+        <string>F:\Media\TV Shows\The X-Files (1993)\Season 01\The X-Files - S01E01 - Pilot.mp4</string>
+        <string>F:\Media\TV Shows\Wings (1990)\Season 1\Wings - S01E01 - Legacy.mkv</string>
+        <string>F:\Media\Kpop\Photobooks\Nmixx - 1St Photobook Mixxpedia Pick La [2022.08.08] (4788589374739968).mp4</string>
+        <string>F:\Media\TV Shows\The IT Crowd (2006)\Season 01\The IT Crowd - S01E01 - Yesterday's Jam.mkv</string>
+        <string>https://www.youtube.com/watch?v=qEu_uo1mUkI|지상 최대! 개그형 발라드 그룹의 탄생 [ EN JP CN ]</string>
+        <string>https://www.youtube.com/watch?v=0WkLNMq1psA|SecretBase 240126 ParkShiOn.SSS [ EN JP CN ]</string>
+        <string>https://www.youtube.com/watch?v=hlbO2SFozHQ|우산 대신 WAV 찾으러 떠난 Aria｜EN JP CN | SIGNAL 240129</string>
+        <string>https://www.youtube.com/watch?v=mDIWx0DGrMg|tripleS 서울 콘서트 D-4 | EN | SIGNAL 240130</string>
+        <string>F:\Media\TV Shows\The Nanny (1993)\Season 2\The Nanny - S02E04 - Material Fran.mkv</string>
+        <string>F:\Media\TV Shows\The Nanny (1993)\Season 2\The Nanny - S02E03 - Everybody Needs a Bubby Sometimes.mkv</string>
+        <string>F:\Media\TV Shows\The Nanny (1993)\Season 2\The Nanny - S02E02 - The Playwright.mkv</string>
+        <string>F:\Media\Kpop\[Channel] NewJeans\[2023-12-28] [Jeans' ZINE🐢] 다니엘의 힐링 여행 EP.1 모다니와 동물 친구들🐰🦙🐴🐕🐷 ｜ NewJeans (waPS1dLcaxY).mp4</string>
+        <string>F:\Media\TV Shows\The Nanny (1993)\Season 1\The Nanny - S01E17 - Stop the Wedding, I Want to Get Off.mkv</string>
+    </RecentFiles>
+    <WindowLocation>
+        <X>-1</X>
+        <Y>0</Y>
+    </WindowLocation>
+    <WindowPosition>
+        <X>-7</X>
+        <Y>1084</Y>
+    </WindowPosition>
+    <WindowSize>
+        <Width>1133</Width>
+        <Height>637</Height>
+    </WindowSize>
+    <AudioDevice />
+    <ConfigEditorSearch>Video/libplacebo/Sigmoidization:</ConfigEditorSearch>
+    <Mute>no</Mute>
+    <StartupFolder />
+</AppSettings>

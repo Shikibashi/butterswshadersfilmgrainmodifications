@@ -1,0 +1,5 @@
+start=93.160000
+vf=bwdif
+af=acompressor=ratio=4,loudnorm
+sub-delay=-3.999998
+sub-visibility=no

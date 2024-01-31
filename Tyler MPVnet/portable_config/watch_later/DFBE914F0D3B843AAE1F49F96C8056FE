@@ -1,0 +1,4 @@
+start=440.707000
+deinterlace=yes
+vf=bwdif
+af=acompressor=ratio=4,loudnorm
