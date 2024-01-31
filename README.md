@@ -4,9 +4,11 @@ I used Asmodians Max Settings in Madvr, you can reset madvr easily to use these 
 
 [Asmodian settings](https://forum.doom9.org/showthread.php?p=1709814#post1709814)
 
-I use filmgrain1 as the first pre-resize shader in mpchc, the second shader being used is grain
+I use grain as the first pre-resize shader in mpchc
 
-I use grain as the first post resize shader in mpchc, the second shader being used is filmgrain1
+I use grain as the first post resize shader in mpchc
+
+If you would like to use MPV on windows with a gui download the Tyler MPVnet folder, if on linux using MPV just download the portable config folder within Tyler MPVnet and drag the contents to your config folder for mpv.
 
 Depending on Content resolution being watched it may be worth it to upscale only 2x, so for 480 upscale to 720p, rather than upscaling to 4k, for 720p upscaling to 1440p, for 1080p upscaling to 2160p // This works well for post resize shaders. Will get test pictures soon.
 
